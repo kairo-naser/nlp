@@ -1,67 +1,83 @@
 # NLP Labs Repository
 
-This repository contains a collection of Jupyter notebooks for Natural Language Processing (NLP) labs and experiments. The labs cover fundamental NLP concepts, text representation techniques, and machine learning applications on cybersecurity data.
+This repository is a practical NLP lab environment built around natural language processing techniques and real-world cybersecurity data. It is designed to help students and practitioners explore text representation, NLP preprocessing, and supervised learning using a corpus of cybersecurity attack records.
+
+## Purpose
+
+The core purpose of this repository is to provide a reproducible NLP pipeline for research, experimentation, and learning. It demonstrates how text data can be prepared, represented, and modeled in a way that makes it easier to analyze cybersecurity reports and detect patterns in attack behavior.
 
 ## Contents
 
 ### Notebooks
-- **4C_Lab_Text_Representation.ipynb**: Lab on text representation techniques including CountVectorizer, TF-IDF, and basic preprocessing.
-- **nltk-nlp-lab.ipynb**: Introduction to NLTK library covering tokenization, stop words, POS tagging, and lemmatization.
-- **gbt.ipynb**: Training a Gradient Boosting Trees model for text classification using cybersecurity attack data.
+- **4C_Lab_Text_Representation.ipynb**: Explores text vectorization methods such as CountVectorizer and TF-IDF, along with preprocessing techniques.
+- **nltk-nlp-lab.ipynb**: Introduces NLTK workflows for tokenization, stop-word removal, POS tagging, and lemmatization.
+- **gbt.ipynb**: Builds and evaluates a Gradient Boosting Trees classifier for text-based cybersecurity classification tasks.
+- **train_pipeline.ipynb**: (Current project notebook) Implements a complete training pipeline for NLP model development.
+- **complete_nlp_pipeline.ipynb**: Combines preprocessing, feature extraction, training, and evaluation in a more end-to-end notebook.
 
 ### Data Files
-- **cybersecurity_attacks.csv**: Dataset containing 40,000 records of cybersecurity attacks with 25 metrics including timestamps, IP addresses, protocols, attack types, and more.
-- **evaluation.csv**: Evaluation results and metrics from model training.
+- **cybersecurity_attacks.csv**: Main dataset containing records of cybersecurity incidents and network events.
+- **evaluation.csv**: Logged evaluation metrics and results from model experiments.
 
 ### Archive
-- **archive/**: Contains archived versions of datasets and documentation.
+- **archive/**: Contains archived dataset versions and documentation.
   - **cybersecurity_attacks.csv**: Original dataset file.
-  - **README.md**: Detailed description of the cybersecurity attacks dataset columns.
+  - **README.md**: Additional details about the archived dataset.
 
-## Prerequisites
-
-- Python 3.x
-- Jupyter Notebook
-- Required libraries: pandas, nltk, scikit-learn, etc. (install via pip as needed in notebooks)
-
-## Usage
+## How to Use This Repository
 
 1. Clone the repository:
-   ```
+   ```bash
    git clone <repository-url>
    cd nlp
    ```
 
-2. Install dependencies (if not using notebook installs):
-   ```
-   pip install pandas nltk scikit-learn
+2. Install dependencies:
+   ```bash
+   pip install pandas nltk scikit-learn jupyter
    ```
 
-3. Open and run the notebooks in Jupyter:
-   ```
+3. Launch Jupyter Notebook:
+   ```bash
    jupyter notebook
    ```
 
-4. Start with the basic labs and progress to machine learning applications.
+4. Open the notebooks in order, starting with the basic labs and progressing to the training pipeline.
+
+## What This Repository Covers
+
+- Text preprocessing for NLP tasks
+- Text representation using vectorizers
+- NLP fundamentals with NLTK
+- Model training and evaluation for classification
+- Working with cybersecurity-related text and metadata
+
+## Repository Structure and Responsibilities
+
+This repository is responsible for:
+- Providing educational NLP examples through notebooks
+- Demonstrating the end-to-end process of preparing text data
+- Showing how to inspect, clean, and transform cybersecurity datasets
+- Supporting experimentation with model training and performance evaluation
 
 ## Dataset Description
 
-The cybersecurity_attacks.csv dataset includes the following columns:
+The `cybersecurity_attacks.csv` dataset includes multiple fields that support NLP and security analytics, such as:
 - Timestamp
 - Source/Destination IP Addresses and Ports
 - Protocol, Packet Length, Packet Type
 - Traffic Type, Payload Data
 - Malware Indicators, Anomaly Scores
-- Alerts/Warnings, Attack Type, Attack Signature
-- Action Taken, Severity Level
+- Alerts and Attack Signatures
+- Severity Level
 - User/Device/Network Information
-- Geo-location Data, Proxy Information
+- Geo-location and Proxy metadata
 - Firewall Logs, IDS/IPS Alerts, Log Source
 
 ## Contributing
 
-Feel free to contribute improvements, additional labs, or bug fixes.
+Contributions are welcome. Please add new notebooks, improve existing workflows, or update documentation to make this repository more useful.
 
 ## License
 
-[Add license information if applicable]
+Add license information here if applicable.
