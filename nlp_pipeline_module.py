@@ -26,7 +26,6 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-
 # Download required NLTK data
 try:
     nltk.data.find('tokenizers/punkt')
@@ -34,6 +33,7 @@ except LookupError:
     nltk.download('punkt', quiet=True)
     nltk.download('stopwords', quiet=True)
     nltk.download('wordnet', quiet=True)
+
 
 
 class NLPPipeline:
